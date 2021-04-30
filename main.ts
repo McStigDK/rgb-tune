@@ -31,7 +31,7 @@ let Channel = 0
 let B = 0
 let G = 0
 let R = 0
-R = 255
+R = 0
 G = 0
 B = 0
 Channel = 0
@@ -39,7 +39,8 @@ let X = 0
 let NumLeds = 18
 let Brightness = 128
 strip = neopixel.create(DigitalPin.P0, NumLeds, NeoPixelMode.RGB)
-strip.setBrightness(Brightness)
+strip.clear()
+strip.show()
 basic.forever(function () {
     led.plot(0, 0)
     basic.pause(100)
